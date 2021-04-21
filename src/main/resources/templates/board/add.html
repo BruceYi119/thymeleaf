@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{layout/layout.html}">
+<head>
+<link rel="stylesheet" data-th-href="@{/vendor/summernote/summernote.min.css}" />
+<script defer type="text/javascript" data-th-src="@{/vendor/summernote/summernote.min.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/vendor/summernote/lang/summernote-ko-KR.min.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/js/edit.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/js/boardAdd.js}"></script>
+</head>
+<main data-layout-fragment="content">
+	<div class="container p-5">
+		<h1 class="h3 mr-auto">글쓰기</h1>
+		<form data-th-method="post" data-th-action="@{/board}">
+			<table class="table table-dark">
+				<tbody>
+					<tr>
+						<th>제목</th>
+						<td><input type="text" name="bsubject" class="form-control"></td>
+					</tr>
+					<tr>
+						<th>글쓴이</th>
+						<td><input type="text" name="bname" class="form-control"></td>
+					</tr>
+					<tr>
+						<th>글쓴이</th>
+						<td class="bg-light text-dark"><textarea name="bcontent" id="edit"></textarea></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<th colspan="2" class="text-center">
+						<button class="btn btn-info">등록</button>
+					</th>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+</main>
+</html>

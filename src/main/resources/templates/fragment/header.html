@@ -1,0 +1,13 @@
+<header data-th-fragment="header">
+	<nav class="navbar bg-dark navbar-dark navbar-expand-sm d-flex justify-content-between">
+		<h3 class="h5 mb-0 text-success"><a data-th-href="@{/main}" class="text-decoration-none text-success">Thymeleaf</a></h3>
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" data-th-href="@{/main}" data-th-classappend="${tabIndex == 1} ? active">메인</a></li>
+			<li class="nav-item"><a class="nav-link" data-th-href="@{/board/list}" data-th-classappend="${tabIndex == 2} ? active">리스트</a></li>
+			<li class="nav-item"><a class="nav-link" data-th-href="@{/board/add}" data-th-classappend="${tabIndex == 3} ? active">글쓰기</a></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#" data-th-classappend="${tabIndex == 4} ? active">수정</a></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#" data-th-classappend="${tabIndex == 5} ? active">상세</a></li>
+		</ul>
+		<a data-th-href="@{/logout}" class="text-decoration-none text-secondary">로그아웃</a>
+	</nav>
+</header>
