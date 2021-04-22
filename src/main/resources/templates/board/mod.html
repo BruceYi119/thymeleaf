@@ -1,7 +1,43 @@
 <html xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{layout/layout.html}">
-	<main data-layout-fragment="content">
-		<div class="container">
-			<h1 class="h3 mr-auto pt-5">수정</h1>
-		</div>
-	</main>
+<head>
+<link rel="stylesheet" data-th-href="@{/vendor/summernote/summernote.min.css}" />
+<script defer type="text/javascript" data-th-src="@{/vendor/summernote/summernote.min.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/vendor/summernote/lang/summernote-ko-KR.min.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/js/edit.js}"></script>
+<script defer type="text/javascript" data-th-src="@{/js/boardMod.js}"></script>
+</head>
+<main data-layout-fragment="content">
+	<div class="container">
+		<h1 class="h3 mr-auto pt-5">수정</h1>
+		<form data-th-method="put" data-th-action="@{/board}">
+			<input type="hidden" data-th-value="${vo.bno}" name="bno">
+			<table class="table table-dark">
+				<tbody>
+					<tr>
+						<th>제목</th>
+						<td><input type="text" name="bsubject" class="form-control" data-th-value="${vo.bsubject}"></td>
+					</tr>
+					<tr>
+						<th>글쓴이</th>
+						<td data-th-text="${vo.bname}"></td>
+					</tr>
+					<tr>
+						<th>내용</th>
+						<td class="bg-light text-dark"><textarea name="bcontent" id="edit" data-th-text="${vo.bcontent}"></textarea></td>
+					</tr>
+					<tr>
+						<th>작성일</th>
+						<td data-th-text="${#dates.format(vo.breg_dt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<th colspan="2" class="text-center">
+						<button type="submit" class="btn btn-primary">수정</button>
+						<a data-th-href="@{|/board/detail/${vo.bno}|}"><button type="button" class="btn btn-warning">취소</button></a>
+					</th>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+</main>
 </html>
