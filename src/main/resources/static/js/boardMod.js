@@ -1,8 +1,8 @@
 'use strict';
 
 const initMod = () => {
-	$('#btn-delete').bind('click', function() {
-		const bno = $(this).attr('data-bno');
+	$('#btn-delete').bind('click', () => {
+		const bno = $('input[name=bno]').val();
 
 		$.ajax({
 			url: '/board',
@@ -10,10 +10,9 @@ const initMod = () => {
 		    data: { bno: bno },
 		    success: (res) => {
 		        if (res === 'succ') {
-		        	alert('삭제 성공!');
 		        	location.href='/board/list';
 		        } else {
-		        	alert('삭제 실패!');		        
+		        	alert('삭제 실패!');
 		        }
 		    }
 		});

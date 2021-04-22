@@ -33,6 +33,7 @@
 				<tfoot>
 					<th colspan="2" class="text-center">
 						<button type="submit" class="btn btn-primary">수정</button>
+						<button type="button" class="btn btn-danger" data-target="#modal-delete" data-toggle="modal">삭제</button>
 						<a data-th-href="@{|/board/detail/${vo.bno}|}"><button type="button" class="btn btn-warning">취소</button></a>
 					</th>
 				</tfoot>
@@ -40,4 +41,5 @@
 		</form>
 	</div>
 </main>
+<div data-layout-fragment="modal" data-th-replace="fragment/modal :: delete"></div>
 </html>
