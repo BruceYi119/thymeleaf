@@ -1,10 +1,10 @@
-package com.thymeleaf.service;
+package com.thymeleaf.component;
 
 import java.util.regex.Pattern;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class Paging {
 
 	private StringBuilder sb;
@@ -58,7 +58,7 @@ public class Paging {
 			sb = new StringBuilder();
 
 		sb.setLength(0);
-		
+
 		Pattern pattern = Pattern.compile("[?].");
 		String queryStr = pattern.matcher(link).find() ? "&" : "?";
 		int prevStartPage = (page - pageViewCnt - 1) / pageViewCnt * pageViewCnt + 1;

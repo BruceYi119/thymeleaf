@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.thymeleaf.component.Paging;
 import com.thymeleaf.mapper.BoardMapper;
-import com.thymeleaf.service.Paging;
 import com.thymeleaf.vo.BoardVO;
 
 @Controller
