@@ -48,34 +48,34 @@ public class Test {
 //		String dir = System.getProperty("user.dir");
 	}
 
-	public static void main(String[] args) throws IOException {
-		String dir = System.getProperty("user.dir");
-		String baseDir = dir + "/src/main/resources/";
-//		String fname = "application.properties";
-		String fname = "test.txt";
-		String wBaseDir = dir + "/test/cert/";
-		String wFname = "test.properties";
-
-		Path p = Paths.get(wBaseDir);
-
-		if (!Files.isDirectory(p))
-			Files.createDirectories(p);
-
-//		Files.readString(Paths.get(baseDir, fname), StandardCharsets.ISO_8859_1)
-
-//		Files.write(Paths.get(wBaseDir, wFname),
-//				StandardCharsets.UTF_8.decode(null),
-//				StandardOpenOption.CREATE);
-
-//		FileChannel fc = FileChannel.open(Paths.get(baseDir, fname), StandardOpenOption.READ);
-//		ByteBuffer bb = ByteBuffer.allocate((int) fc.size());
-
-//		fc.read(bb);
-//		bb.flip();
-
-//		Files.write(Paths.get(wBaseDir, wFname),
-//				StandardCharsets.UTF_8.decode(bb).toString().getBytes(StandardCharsets.UTF_8),
-//				StandardOpenOption.CREATE);
-	}
+//	public static void main(String[] args) throws IOException {
+//		String dir = System.getProperty("user.dir");
+//		String baseDir = dir + "/src/main/resources/";
+////		String fname = "application.properties";
+//		String fname = "test.txt";
+//		String wBaseDir = dir + "/test/cert/";
+//		String wFname = "test.properties";
+//
+//		Path p = Paths.get(wBaseDir);
+//
+//		if (!Files.isDirectory(p))
+//			Files.createDirectories(p);
+//
+////		Files.readString(Paths.get(baseDir, fname), StandardCharsets.ISO_8859_1)
+//
+////		Files.write(Paths.get(wBaseDir, wFname),
+////				StandardCharsets.UTF_8.decode(null),
+////				StandardOpenOption.CREATE);
+//
+////		FileChannel fc = FileChannel.open(Paths.get(baseDir, fname), StandardOpenOption.READ);
+////		ByteBuffer bb = ByteBuffer.allocate((int) fc.size());
+//
+////		fc.read(bb);
+////		bb.flip();
+//
+////		Files.write(Paths.get(wBaseDir, wFname),
+////				StandardCharsets.UTF_8.decode(bb).toString().getBytes(StandardCharsets.UTF_8),
+////				StandardOpenOption.CREATE);
+//	}
 
 }
