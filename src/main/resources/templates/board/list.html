@@ -15,11 +15,12 @@
 				</tr>
 			</thead>
 			<tbody>
+			<div></div>
 				<tr data-th-each="vo : ${list}" data-th-attr="data-bno=${vo.bno}" data-th-if="${voStat.size > 0}">
 					<td scope="row" data-th-text="${num + voStat.index}"></td>
 					<td data-th-text="${vo.bname}"></td>
 					<td data-th-text="${vo.bsubject}"></td>
-					<td data-th-text="${#dates.format(vo.breg_dt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+					<td data-th-text="${#dates.format(vo.breg_dt, 'yyyy/MM/dd HH:mm:ss')}"></td>
 				</tr>
 				<tr data-th-if="${list.size() == 0}"><td colspan="4" class="text-center">조회된 데이터가 없습니다</td></tr>
 			</tbody>
